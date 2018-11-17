@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/sutoni/toko-online/issues"
   },
-  "homepage": "https://github.com/sutoni/toko-online#readme"
+  "homepage": "https://github.com/sutoni/toko-online#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
 }
