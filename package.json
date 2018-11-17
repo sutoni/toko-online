@@ -1,0 +1,23 @@
+{
+  "name": "toko-online",
+  "version": "1.0.0",
+  "description": "Toko Online Usahadong",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sutoni/toko-online.git"
+  },
+  "keywords": [
+    "Toko",
+    "Online"
+  ],
+  "author": "Sutoni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sutoni/toko-online/issues"
+  },
+  "homepage": "https://github.com/sutoni/toko-online#readme"
+}
