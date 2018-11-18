@@ -22,10 +22,13 @@ app.set("view engine", "ejs");
 //setup public folder
 app.use(express.static(path.join(__dirname,"public")));
 
-//Setup index
-app.get("/",function(req, res){
-    res.send("ini adalah index yaa ok")
-});
+//Set routes
+var pages = require("./routes/pages.js");
+var adminPages = require("./routes/admin_pages.js");
+
+//Redirect
+app.use("/", pages);
+app.use("/dashboard", adminPages);
 
 //Setup server
 var port = 3000;

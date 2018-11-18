@@ -3,11 +3,10 @@ var router = express.Router();
 
 //exports
 router.get("/",function(req, res){
-	 res.send("Admin area");
-	//res.render("index",{
-      //  title : "Happy Shopping"
-    //});
-   
+    res.render("index",{
+        title : "Happy Shopping"
+    });
+    //res.send("ini adalah index yaa ok")
 
 });
 
