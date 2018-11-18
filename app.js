@@ -3,6 +3,17 @@ var path = require("path");
 
 //initial app
 var app = express();
+var mongoose = require("mongoose");
+var config = require("./config/database");
+
+//connect to database
+mongoose.connect(config.database);
+var db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", function(){
+    console.log("Sudah Connect ke Mongodb");
+})
+
 
 //view engine setup
 app.set("views", path.join(__dirname,"views"));
@@ -13,7 +24,7 @@ app.use(express.static(path.join(__dirname,"public")));
 
 //Setup index
 app.get("/",function(req, res){
-    res.send("ini adalah index yaa")
+    res.send("ini adalah index yaa ok")
 });
 
 //Setup server

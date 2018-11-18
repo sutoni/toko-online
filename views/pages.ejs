@@ -1,0 +1,35 @@
+<html>
+<head>
+    
+
+
+</head>
+<body>
+
+<table class="table table-striped">
+	<thead>
+		<tr class="home">
+			<th>Title</th>
+			<th>Edit</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- do looping --> 
+		<% pages.forEach(function (page) { %>
+			<tr id="id_<%= page._id %>" class="<%= page.slug %> ">
+				<td><%= page.title %></td>
+				<td><a href="/admin/pages/edit-page/<%= page.slug %>">Edit</a></td>
+				<% if (page.slug == 'home') { %>
+					<td></td>
+				<% } else { %>
+					<td><a href="/admin/pages/delete-pages/<%= page._id %>">Delete</a></td>
+				<% } %>
+			</tr>
+		<% }) %>
+	</tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</body>
+</html>
